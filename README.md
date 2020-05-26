@@ -154,62 +154,77 @@ When I tried to view the contents of this file I found that it's a binary.
                                                                                                  8W�2�E5�neXmk���q�PV�*`��ex�=f�&�Vs��y��,dMg�]YyH;��y�t��d���F���s����������=�!I)�wL���LZ��)N��d,&;R�u
 ```
 
-### Deploying / Publishing
 
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
+To decrypt a file with GnuPG/PGP, all I  have to do is running gpg plaintext.txt.gpg  command.
 
 ```shell
-packagemanager deploy awesome-project -s server.com -u username -p password
+aty@aty PGP]$ gpg plaintext.txt.gpg 
+You need a passphrase to unlock the secret key for
+user: "alitaha <aykseldi1@yahoo.com>"
+2048-bit RSA key, ID 1C9F094D, created 2020-01-05 (main key ID BB4F7450)
+gpg: encrypted with 2048-bit RSA key, ID 1C9F094D, created 2020-01-05
+      "alitaha <aykseldi1@yahoo.com>"
+File `plaintext.txt' exists. Overwrite? (y/N) N
+Enter new filename: plaintext_decrypted.txt
+
+```
+### Deploying / Publishing
+
+I used Thunderbird as a mailer, so I need to to download and install enigmail using your Add-ons manager from Firefox. I made necessary  configurations after insatllation og  enigmail. Since I have already created key pairs, I just introduced them to enigmail setup.
+
+![Thunderbird e mail](https://github.com/aykseldi/PGP-Implementation/blob/master/Snapshot1_2.png)
+
+At the last step, I sent a mail to another mail adress and attached my public key in it. 
+
+![Thunderbird e mail](https://github.com/aykseldi/PGP-Implementation/blob/master/Snapshot1_3.png)
+
+
+
+
+![Thunderbird e mail](https://github.com/aykseldi/PGP-Implementation/blob/master/Snapshot1_4.png)
+
+
+At the last step I decrypted the mail with the public key. Here is my public key, which is sent via mail to recipient.
+
+```shell
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+mQENBF4R92YBCADyFJJBz51PPaT0YF+xT9m29rNla+Vd9Vg9Hs8YZCDOtxtZ5EvM
+KW8YOaS3uCer+P5vQBGzCOMtY9poXt0GtCsYGHPtOvlWu9H2Ucpdk+ZS0atM0apZ
+wMP97n65iazFk9EQGbDgqQD2Qex40Zf5k03ZJpEpNXzch93KTxp1Hq9IBK50uj5+
+kD/r3+LDjGM/BsCS6cU+XdafO4Wbf9XJOekuSorXvo0KCXBx8gF9ZFN+A9XHzRdD
+9FRxLETe9xcrwgXGkBFQWX7kpYSQF8J8amhp7Sub+Q5SKUAvr8hLR++UIkH6BGUv
+5pdBFU2q+x5fDiQqNBg+ALNl4uQgD/SJ7yeTABEBAAG0HWFsaXRhaGEgPGF5a3Nl
+bGRpMUB5YWhvby5jb20+iQE5BBMBAgAjBQJeEfdmAhsDBwsJCAcDAgEGFQgCCQoL
+BBYCAwECHgECF4AACgkQRpyqb7tPdFAUaggAxLpiPWg/GY9sEmrgDv1Ld6BMqev3
+QVg4eXQwiK50xRlBQH28FFDjOzzp9RWHzFfmB2nGRVtWZ0NUdyrT+pso2v2TkwqE
+JXNhZbFZepOel7azFVVXQ3E5RPTcqNFnbRwpXCtf2hIX9/NVpAd4CjU+wRLXxJwW
+wsouBrbhtExNzr6Qu9o86b082w+3TiGmY6ACH6REfU5GAdZmI3NQ/VadLTCOW7S+
+r/jexr9pKEuX0kUzerf8/0hdXBDV4Kn4ZZlWNF5c/bbMZMyJ2AYd9TQBPzH7pVMt
+MWbwgrPW/4hWYNSscV6N19RUDUqLFB+sGUPrXqZYq0LgpVaGIgmNtTF3CLkBDQRe
+EfdmAQgAs7JqQOFNJgzoDsparaOLSm2VmnEYT9je0IQjT1ZqSZpSruSEsC2mjnPW
+DLDEnLv2uVCwiyRsBJG6Vv1xtJaMPyi+xMga1mg5boRiWVzV61LnHJK9Y/7ynFx7
+uKYoyLv55HNy77Emwhk1iuJ2621haQmYT1R4aQladhRuxQ9ngNEAHcZ8h9fWJmMA
+JTHcttPWGtdqKYYBTB/9tKa9qTV19In3CgoSBOUPmCiswr3vQ8B1Zi6JGnQ/kGfS
+kLf8piwfyZJvEMduDT8qtP0k0z2dAcovddnOPBExOoSeqlk+5ReOGppd6E6zWMtq
+s6auVzg5m71g6To8pY8fy2Pn4JG59QARAQABiQEfBBgBAgAJBQJeEfdmAhsMAAoJ
+EEacqm+7T3RQMJQIAN3pGaO0efCg9Ml1d4zAnl76nb15N9LKM7Lks2GUlHWI1TVz
+H1u8QoH0lVuDQypqPCAF/Nt2l8jAfGfkhDRvLtw1RUWMul0ewtZkbTPh8spPS/w7
+8KngmXhv+CvQXarKIF96lNFV9WstFC9BNc3xIuHFe5c2roC4217dK3mPrcyiMD25
+wcVsqbyeNH39s2upPQCPeHQ7mIdW7MopHCFwwTHHiGCQCKR4K2+6aHgpZ3YoIkMf
+khZTGabRaYSWUMucmRiLr392l0S6Mlb1fSa6Hq6CXoAqv18B1a+ot7ohTya0/Rod
+eCoE/ZBUVDC/rJDpOC3/vT5jmQzunyaUhVQJ9jk=
+=ruME
+-----END PGP PUBLIC KEY BLOCK-----
 ```
 
-And again you'd need to tell what the previous code actually does.
 
-## Features
-
-What's all the bells and whistles this project can perform?
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-#### Argument 1
-Type: `String`  
-Default: `'default value'`
-
-State what an argument does and how you can use it. If needed, you can provide
-an example below.
-
-Example:
-```bash
-awesome-project "Some other value"  # Prints "You're nailing this readme!"
-```
-
-#### Argument 2
-Type: `Number|Boolean`  
-Default: 100
-
-Copy-paste as many of these as you need.
 
 ## Contributing
 
-When you publish something open source, one of the greatest motivations is that
-anyone can just jump in and start contributing to your project.
-
-These paragraphs are meant to welcome those kind souls to feel that they are
-needed. You should state something like:
-
 "If you'd like to contribute, please fork the repository and use a feature
 branch. Pull requests are warmly welcome."
-
-If there's anything else the developer needs to know (e.g. the code style
-guide), you should link it here. If there's a lot of things to take into
-consideration, it is common to separate this section to its own file called
-`CONTRIBUTING.md` (or similar). If so, you should say that it exists here.
 
 ## Links
 
@@ -217,21 +232,17 @@ Even though this information can be found inside the project on machine-readable
 format like in a .json file, it's good to include a summary of most useful
 links to humans using your project. You can include links like:
 
-- Project homepage: https://your.github.com/awesome-project/
-- Repository: https://github.com/your/awesome-project/
-- Issue tracker: https://github.com/your/awesome-project/issues
+- Project homepage: https://github.com/aykseldi/PGP-Implementation/edit/master/README.md
+- Repository: https://github.com/aykseldi/PGP-Implementation/
+- Issue tracker: ttps://github.com/aykseldi/PGP-Implementation/issues
   - In case of sensitive bugs like security vulnerabilities, please contact
     my@email.com directly instead of using issue tracker. We value your effort
     to improve the security and privacy of this project!
 - Related projects:
-  - Your other project: https://github.com/your/other-project/
-  - Someone else's project: https://github.com/someones/awesome-project/
+  - Your other project: https://github.com/aykseldi/Linux-System-Administration
+ 
 
 
 ## Licensing
-
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
 
 "The code in this project is licensed under MIT license."
