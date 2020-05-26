@@ -118,7 +118,7 @@ sub   2048R/1C9F094D 2020-01-05
 
 Some additional steps for the developer to build the project after some code changes. 
 
-It's time to encrypt files with GPG. So I first created a file named plaintext.txt on /home/aty/Desktop/PGP folder. I inserted some text into file. When I run the comman , it will encrypt the file with the keys that I determined previous steps. I prefered 2048 bit RSA key pair while installation.
+1. It's time to encrypt files with GPG. So I first created a file named plaintext.txt on /home/aty/Desktop/PGP folder. I inserted some text into file. When I run the comman , it will encrypt the file with the keys that I determined previous steps. I prefered 2048 bit RSA key pair while installation.
 
 ```shell
 (base) [aty@aty PGP]$ gpg -e plaintext.txt 
@@ -155,7 +155,7 @@ When I tried to view the contents of this file I found that it's a binary.
 ```
 
 
-To decrypt a file with GnuPG/PGP, all I  have to do is running gpg plaintext.txt.gpg  command.
+1. To decrypt a file with GnuPG/PGP, all I  have to do is running gpg plaintext.txt.gpg  command.
 
 ```shell
 aty@aty PGP]$ gpg plaintext.txt.gpg 
@@ -174,7 +174,7 @@ I used Thunderbird as a mailer, so I need to to download and install enigmail us
 
 ![Thunderbird e mail](https://github.com/aykseldi/PGP-Implementation/blob/master/Snapshot1_2.png)
 
-At the last step, I sent a mail to another mail adress and attached my public key in it. 
+At the final  step, I sent a mail to another mail adress and attached my public key in it. 
 
 ![Thunderbird e mail](https://github.com/aykseldi/PGP-Implementation/blob/master/Snapshot1_3.png)
 
