@@ -103,29 +103,56 @@ sub   2048R/1C9F094D 2020-01-05
 ## Developing
 
 Here's a brief intro about what a developer must do in order to start developing
-the project further:
+the project further, I  created  keys and list is shown below.
 
 ```shell
-git clone https://github.com/your/awesome-project.git
-cd awesome-project/
-packagemanager install
+(base) [aty@aty ~]$  gpg --list-keys
+/home/aty/.gnupg/pubring.gpg
+----------------------------
+pub   2048R/BB4F7450 2020-01-05
+uid                  alitaha <aykseldi1@yahoo.com>
+sub   2048R/1C9F094D 2020-01-05
 ```
-
-And state what happens step-by-step.
 
 ### Building
 
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here:
+Some additional steps for the developer to build the project after some code changes. 
+
+It's time to encrypt files with GPG. So I first created a file named plaintext.txt on /home/aty/Desktop/PGP folder. I inserted some text into file. When I run the comman , it will encrypt the file with the keys that I determined previous steps. I prefered 2048 bit RSA key pair while installation.
 
 ```shell
-./configure
-make
-make install
+(base) [aty@aty PGP]$ gpg -e plaintext.txt 
+You did not specify a user ID. (you may use "-r")
+Current recipients:
+Enter the user ID.  End with an empty line: alitaha
+Current recipients:
+2048R/1C9F094D 2020-01-05 "alitaha <aykseldi1@yahoo.com>"
+Enter the user ID.  End with an empty line:
 ```
 
-Here again you should state what actually happens when the code above gets
-executed.
+Here  what actually happens when the code above gets executed. I verified that I now  have encrypted files present in my directory.
+
+```shell
+(base) [aty@aty PGP]$ ll
+total 296
+-rw-rw-r--. 1 aty aty     61 Jan  5 17:53 plaintext.txt
+-rw-rw-r--. 1 aty aty    396 Jan  5 19:47 plaintext.txt.gpg
+```
+When I tried to view the contents of this file I found that it's a binary.
+
+
+
+```shell
+(base) [aty@aty PGP]$ cat plaintext.txt.gpg 
+�
+  ���	M�&���#a��/Ŗۖ�R����
+                             ��W7�x�Q8
+                                         03��
+                                             ���_�1��-�iN��:;�W荠f����b3D
+                                                                         ­�sq�H��bY��5�����‑�ӓ�@Xf^��z�,jD��e�<��|"��'f�(�	����*V@�s=��/�
+                            d\�f([��6�����m���%kX��e�ϲ��ͮ^Η�~S��3���#i�V4Jf2Q��S�n��5Ʋ_.�y6��.ů����d��/M]�p��:�z�(s1[Cw�s�A��{h�
+                                                                                                 8W�2�E5�neXmk���q�PV�*`��ex�=f�&�Vs��y��,dMg�]YyH;��y�t��d���F���s����������=�!I)�wL���LZ��)N��d,&;R�u
+```
 
 ### Deploying / Publishing
 
