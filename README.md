@@ -236,7 +236,7 @@ links to humans using your project. You can include links like:
 - Repository: https://github.com/aykseldi/PGP-Implementation/
 - Issue tracker: ttps://github.com/aykseldi/PGP-Implementation/issues
   - In case of sensitive bugs like security vulnerabilities, please contact
-    my@email.com directly instead of using issue tracker. We value your effort
+    aykseldi1@yahoo.com directly instead of using issue tracker. We value your effort
     to improve the security and privacy of this project!
 - Related projects:
   - Your other project: https://github.com/aykseldi/Linux-System-Administration
