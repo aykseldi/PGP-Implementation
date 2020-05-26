@@ -98,7 +98,7 @@ pub   2048R/BB4F7450 2020-01-05
 uid                  att <aykseldi1@yahoo.com>
 sub   2048R/1C9F094D 2020-01-05
 ```
-![Public key generation](https://github.com/aykseldi/PGP-Implementation/blob/master/Snapshot1.png)
+![Public key generation](https://github.com/aykseldi/PGP-Implementation/blob/master/Snapshot1_1.png)
 
 ## Developing
 
